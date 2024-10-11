@@ -26,10 +26,23 @@ namespace Hemuppgift_Arv_Temp.Game
             Console.WriteLine("Den som tar den sista pinnen förlorar. Lycka till!");
         }
 
-        public void TakePins()
+        public void takePins(int tagnaPinnar)
         {
+            Console.WriteLine("Hur många pinnar vill du ta?");
+            tagnaPinnar = Convert.ToInt32(Console.ReadLine());
 
+            if (tagnaPinnar <= 3 && tagnaPinnar > 0)
+            {
+                NoPins -= tagnaPinnar;
+                Console.WriteLine($"Du har tagit bort {tagnaPinnar}");
+                Console.WriteLine($"Det finns nu {NoPins} kvar på bordet");
+            }
+            else 
+            {
+                Console.WriteLine("Du kan bara ta bort 1-2 pinnar i taget");
+            }
         }
+        
         /*public int GetNoPins()
         { 
         

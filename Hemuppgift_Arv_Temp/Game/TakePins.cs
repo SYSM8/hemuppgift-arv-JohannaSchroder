@@ -7,6 +7,7 @@
         {
             Board board = new Board(10);
             board.SetUp();
+            board.takePins(2);
         }
 
     }
