@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Hemuppgift_Arv_Temp.Game
 {
-    internal class Player
+    abstract class Player
     {
+        //Egenskap
+        public abstract int NoPins { get; set; }
+
+
+        //Metoder
+        public abstract string player();
+
+        public abstract string GetUserId();
+
+        public abstract string TakePins();
+
     }
 }

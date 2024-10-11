@@ -13,26 +13,27 @@ namespace Hemuppgift_Arv_Temp.Game
         public int NoPins { get; set; }
 
         //Konstruktor
-        public Board(int NoPins)
-        { 
+        public Board(int NoPins) 
+        {
             this.NoPins = NoPins;
         }
-
 
         //Metoder
         public void SetUp()
         {
-
+            Console.WriteLine("Välkommen till ett mycket enkelt spel!");
+            Console.WriteLine($"Det finns {NoPins} på bordet, du får ta 1-2pinnar");
+            Console.WriteLine("Den som tar den sista pinnen förlorar. Lycka till!");
         }
 
         public void TakePins()
         {
 
         }
-        public int GetNoPins()
+        /*public int GetNoPins()
         { 
         
-        }
+        }*/
 
 
     }
