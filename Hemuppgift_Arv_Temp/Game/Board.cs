@@ -10,13 +10,13 @@ namespace Hemuppgift_Arv_Temp.Game
     internal class Board
     {
         //Egenskap
-        public int NoPins { get; private set; }
+        public int NoPins { get; set; }
 
         //Metoder
         public void SetUp(int PinnarAntal)//Skriver ut hur många pinnar spelet börjar med
         {
             NoPins = PinnarAntal;
-            Console.WriteLine($"Det finns {PinnarAntal} på bordet.");
+            Console.WriteLine($"Det finns {PinnarAntal} pinnar på bordet.");
         }
 
         public bool takePins(int PinnarTagna)//valde en bool så spelet ska rulla

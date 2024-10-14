@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Hemuppgift_Arv_Temp.Game
 {
-    abstract class Player : Board
+    internal abstract class Player
     {
+        //Egenskap
+        public string UserId { get; set; }
 
-        //Metoder som måste finnas med i klasseena HumanPlayer och ComputerPlayer
-        public abstract string player();
+        //Konstruktor
+        public Player(string UserId)
+        {
+            this.UserId = UserId;
+        }
+
+        //Metoder
+        public abstract int TakePins(Board board);
 
         public abstract string GetUserId();
 
-        public abstract string TakePins();
+
 
     }
 }
