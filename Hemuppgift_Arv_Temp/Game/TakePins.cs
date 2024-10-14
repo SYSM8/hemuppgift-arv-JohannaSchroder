@@ -8,7 +8,6 @@ namespace Hemuppgift_Arv_Temp.Game
         static void Main(string[] args)
         {
 
-
             Board board = new Board();//hämtar Board-klassen 
 
             ComputerPlayer computerPlayer = new ComputerPlayer("Allan");//här kan man byta namn på datorn
@@ -22,7 +21,7 @@ namespace Hemuppgift_Arv_Temp.Game
             Console.WriteLine();//Lite mellanrum
 
             Console.WriteLine($"Hej {PlayerName}!");
-            board.SetUp(10);//Väljer antal pinnar till spelet
+            board.SetUp(11);//Väljer antal pinnar till spelet
             Console.WriteLine("Du får ta 1 eller 2 pinnar.");//förklarar spelets regler
             Console.WriteLine("Den som tar den sista pinnen förlorar. Lycka till!");
 
