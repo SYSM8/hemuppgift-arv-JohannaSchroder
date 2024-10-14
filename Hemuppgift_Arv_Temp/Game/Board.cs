@@ -10,43 +10,38 @@ namespace Hemuppgift_Arv_Temp.Game
     internal class Board
     {
         //Egenskap
-        public int NoPins { get; set; }
-
-        //Konstruktor
-        public Board(int NoPins) 
-        {
-            this.NoPins = NoPins;
-        }
+        public int NoPins { get; private set; }
 
         //Metoder
-        public void SetUp()
+        public void SetUp(int PinnarAntal)
         {
-            Console.WriteLine("Välkommen till ett mycket enkelt spel!");
-            Console.WriteLine($"Det finns {NoPins} på bordet, du får ta 1-2pinnar");
-            Console.WriteLine("Den som tar den sista pinnen förlorar. Lycka till!");
+            NoPins = PinnarAntal;
+            Console.WriteLine($"Det finns {PinnarAntal} på bordet.");
         }
 
-        public void takePins(int tagnaPinnar)
+        public bool takePins(int PinnarTagna)//valde en bool
         {
-            Console.WriteLine("Hur många pinnar vill du ta?");
-            tagnaPinnar = Convert.ToInt32(Console.ReadLine());
-
-            if (tagnaPinnar <= 3 && tagnaPinnar > 0)
+            if (PinnarTagna < 1 || PinnarTagna > 2)
             {
-                NoPins -= tagnaPinnar;
-                Console.WriteLine($"Du har tagit bort {tagnaPinnar}");
-                Console.WriteLine($"Det finns nu {NoPins} kvar på bordet");
+                Console.WriteLine("Du kan bara välja 1 eller 2 pinnar i taget.");
+                return false;
+            }            
+            else if(PinnarTagna > NoPins)
+            {
+                Console.WriteLine("Det finns inte så många pinnar kvar.");
+                return false;
             }
-            else 
+            else
             {
-                Console.WriteLine("Du kan bara ta bort 1-2 pinnar i taget");
+                NoPins -= PinnarTagna;
+                return true;
             }
         }
-        
-        /*public int GetNoPins()
-        { 
-        
-        }*/
+
+        public void GetNoPins()
+        {
+            Console.WriteLine($"Det finns {NoPins} kvar.");
+        }
 
 
     }
