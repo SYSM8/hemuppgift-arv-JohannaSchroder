@@ -7,6 +7,13 @@ namespace Hemuppgift_Arv_Temp.Game
         //Här är main klassen där koden ska testas, lägg in i mappen
         static void Main(string[] args)
         {
+            //F2.
+            //a) Basklass
+            //b) Player p = new Player("Aegon"); -FEL
+            //Player p = new HumanPlayer("Alicent"); -RÄTT
+            //HumanPlayer p = new HumanPlayer("Rhaenyra"); -RÄTT
+            //HumanPlayer p = new ComputerPlayer("Aemond"); -FEL
+
 
             Board board = new Board();//hämtar Board-klassen 
 
